@@ -2,53 +2,43 @@
 
 # Mi computador principal
 
-* Marca/modelo: System 76 Serval WS
-* Tipo: Notebook
-* Año adquisición: 2015
+* Marca/modelo: 
+* Tipo: Desktop
+* Año adquisición: 2021
 * Procesador:
-  * Marca/Modelo: Intel Core i7-4790K
-  * Velocidad Base: 4.00 GHz
-  * Velocidad Máxima: 4.40 GHz
-  * Numero de núcleos: 4 
-  * Humero de hilos: 2
+  * Marca/Modelo: Intel Core i5-10400F
+  * Velocidad Base: 2.9 GHz
+  * Velocidad Máxima: 4.30 GHz
+  * Numero de núcleos: 6 
+  * Humero de hilos: 12
   * Arquitectura: x86_64
   * Set de instrucciones: Intel SSE4.1, Intel SSE4.2, Intel AVX2
 * Tamaño de las cachés del procesador
-  * L1d: 32KB
-  * L1i: 32KB
-  * L2: 256KB
-  * L3: 8192KB
+  * L1d: 384KB
+  * L1i: 384KB
+  * L2: 1536KB
+  * L3: 12288KB
 * Memoria 
-  * Total: 32 GB
-  * Tipo memoria: DDR3
-  * Velocidad 1867 MHz
-  * Numero de (SO)DIMM: 4
+  * Total: 16 GB
+  * Tipo memoria: DDR4
+  * Velocidad 3200 MHz
+  * Numero de (SO)DIMM: 2
 * Tarjeta Gráfica
-  * Marca / Modelo: Nvidia GeForce GTX 980M
-  * Memoria dedicada: 8192 MB
+  * Marca / Modelo: Nvidia GeForce GTX 1660s
+  * Memoria dedicada: 5991 MB
   * Resolución: 1920 x 1080
 * Disco 1: 
-  * Marca: Samsung
+  * Marca: Western Digital
   * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 4
-  * Sistema de archivos: EXT4, swap
-* Disco 2: 
-  * Marca: Samsung
-  * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 1
-  * Sistema de archivos: EXT4
-* Disco 3: 
-  * Marca: Samsung
-  * Tipo: SSD
-  * Tamaño: 1TB
-  * Particiones: 1
-  * Sistema de archivos: EXT4
+  * Tamaño: 0.5TB
+  * Particiones: 3
+  * Sistema de archivos: NTFS
+
+
   
-* Dirección MAC de la tarjeta wifi: 5C:E0:C5:D7:EE:48 
-* Dirección IP (Interna, del router): 192.168.0.129
-* Dirección IP (Externa, del ISP): 190.45.122.34
+* Dirección MAC de la tarjeta wifi: 18:C0:4D:4B:FB:A7 
+* Dirección IP (Interna, del router): 192.168.0.15
+* Dirección IP (Externa, del ISP): 190.162.228.140
 * Proveedor internet: VTR Banda Ancha S.A.
 
 
