@@ -69,3 +69,4 @@ R: 1.19.2
 6) Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre una imagen (screenshot) de su uso de procesador durante alguna corrida para confirmar. 
 
 R: Durante la ejecución se utilizan los 6 nucleos y 12 threads disponibles (12 procesos). Esto es gracias a la paralelización que facilita numpy.
+![](Images/Numero_Procesos_timing_matmul.png)
