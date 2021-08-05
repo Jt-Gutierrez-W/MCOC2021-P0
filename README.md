@@ -49,6 +49,7 @@
 R: Este difiere en los valores particulares de cuanto tarda o cuanta memoria usa para cada corrida en particular. Sin embargo, el comportamiento general del grafico
 es el mismo. Con respecto a lo anterior, se puede ver como tiene la misma volatilidad en al zona intermedia para el tiempo. Para la memoria es la misma grafica lineal
 con valores particulares distintos.
+
 ![](Images/Plot_timing_matmul.png)
 
 2) ¿A qué se pueden deber las diferencias en cada corrida?
