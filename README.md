@@ -86,7 +86,7 @@ R: La función inv de numpy no trabaja con float16 y float128, estos tipos de da
 
 2) ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
 
-R: En el caso de numpy, este utiliza el metodo de la factorización LU. Esta consiste en subdividir el problema en problemas vectoriales mas pequeños, siguiendo una logica *"divide and conquer"*. Luego de resolver estos multiples problemas pequeños se unen los outputs y se obtiene el resultado general. Esto se puede evidenciar en que el comportamiento y complejidad de la función es mas bien del tipo potencial. Esto, calza con el algoritmo para realizar la factorizacion LU, el cual en general es una eliminación Gaussiana o el algortimo de Doolittle. En ambos es necesario tener "*nested loops*" y por lo tanto su comportamiento es potencial. 
+R: En el caso de numpy, este utiliza el metodo de la factorización LU. Esta consiste en subdividir el problema en problemas vectoriales mas pequeños, siguiendo una logica *"divide and conquer"*. Esto se puede evidenciar en que el comportamiento y complejidad de la función es mas bien del tipo potencial.Lo anterior, calza con el algoritmo para realizar la factorizacion LU, el cual en general es una eliminación Gaussiana o el algortimo de Doolittle. En ambos casos, es necesario tener "*nested loops*" y por lo tanto su comportamiento es potencial. 
 
 3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 
