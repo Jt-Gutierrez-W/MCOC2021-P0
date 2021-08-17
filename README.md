@@ -72,3 +72,19 @@ R: 1.19.2
 
 R: Durante la ejecución se utilizan los 6 nucleos y 12 threads disponibles (12 procesos). Esto es gracias a la paralelización que facilita numpy.
 ![](Images/Numero_Procesos_timing_matmul.png)
+
+
+
+
+
+
+##### DESEMPEÑO INV #####
+
+1) Comentarios y observaciones:
+R:
+
+2) ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
+R:
+
+3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
+R: 
