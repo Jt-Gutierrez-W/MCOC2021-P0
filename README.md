@@ -91,3 +91,28 @@ R: comentar
 3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 
 R: comentar
+
+Se adjuntan los plots y estado del procesador para cada caso.
+
+Caso 1 Single:
+
+Caso 1 Double:
+
+Caso 2 Half:
+
+Caso 2 Single:
+
+Caso 2 Double:
+
+Caso 2 Longdouble:
+
+Caso 3 Half:
+
+Caso 3 Single:
+
+Caso 3 Double:
+
+Caso 3 Longdouble:
+
+
+
