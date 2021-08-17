@@ -81,10 +81,10 @@ R: Durante la ejecución se utilizan los 6 nucleos y 12 threads disponibles (12 
 ##### DESEMPEÑO INV #####
 
 1) Comentarios y observaciones:
-R:
+R: comentar
 
 2) ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
-R:
+R: comentar 
 
 3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
-R: 
+R: comentar
