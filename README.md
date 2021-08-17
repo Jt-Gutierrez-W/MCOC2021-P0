@@ -82,11 +82,11 @@ R: Durante la ejecución se utilizan los 6 nucleos y 12 threads disponibles (12 
 
 1) Comentarios y observaciones:
 
-R: comentar
+R: La función inv de numpy no trabaja con float16 y float128, estos tipos de datos no los acepta y por ende no se generaron resultados para esos casos. Cabe mencionar que en los demas casos al trabajar con float128 por lo general este se cambia a float64 ya que python esta codificadao en 64 bits y cualquier valor superior es tomado como si fueran 64 bits. Por otro lado, el float16 en el caso de scipy arroja resultados mas rapidos, es decir al invertir la matriz le toma menos tiempo ya que al utilizar menos bits es mas facil realizar los calculos.
 
 2) ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
 
-R: comentar 
+R: En el caso de numpy, este utiliza el metodo de la factorización LU. Esta consiste en subdividir el problema en problemas vectoriales mas pequeños, siguiendo una logica *"divide and conquer"*. Luego de resolver estos multiples problemas pequeños se unen los outputs y se obtiene el resultado general. Esto se puede evidenciar en que el comportamiento y complejidad de la función es mas bien del tipo potencial. Esto, calza con el algoritmo para realizar la factorizacion LU, el cual en general es una eliminación Gaussiana o el algortimo de Doolittle. En ambos es necesario tener "*nested loops*" y por lo tanto su comportamiento es potencial. 
 
 3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 
