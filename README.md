@@ -104,13 +104,33 @@ Caso 1 Single:
 
 Caso 1 Double:
 
+![](Images/Plot_inv_caso1_double.png)
+
+![](Images/timing_inv_caso1_double.png)
+
 Caso 2 Half:
+
+![](Images/Plot_inv_caso2_half.png)
+
+![](Images/timing_inv_caso2_half.png)
 
 Caso 2 Single:
 
+![](Images/Plot_inv_caso2_single.png)
+
+![](Images/timing_inv_caso2_single.png)
+
 Caso 2 Double:
 
+![](Images/Plot_inv_caso2_double.png)
+
+![](Images/timing_inv_caso2_double.png)
+
 Caso 2 Longdouble:
+
+![](Images/Plot_inv_caso2_longdouble.png)
+
+![](Images/timing_inv_caso2_longdouble.png)
 
 Caso 3 Half:
 
