@@ -71,6 +71,7 @@ R: 1.19.2
 6) Durante la ejecución de su código ¿se utiliza más de un procesador? Muestre una imagen (screenshot) de su uso de procesador durante alguna corrida para confirmar. 
 
 R: Durante la ejecución se utilizan los 6 nucleos y 12 threads disponibles (12 procesos). Esto es gracias a la paralelización que facilita numpy.
+
 ![](Images/Numero_Procesos_timing_matmul.png)
 
 
@@ -91,11 +92,15 @@ Para el caso de Scipy, tambien utiliza el algoritmo de la factorización LU, est
 
 3) ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 
-R: comentar
+R: En general el paralelismo permite la distribucion del trabajo para mejorar el rendimiento y tiempo de ejecucion de los distintos programas. Esta ganancia en eficiencia se debe a que el sistema divide el problema principal en problemas mas pequeños mediante la logica *"divide and conquer"* y estos problemas mas pequeños los distribuye entre los distintos nucleos y threads de la CPU. En cuanto a la estructura del cache, esta al ser una memoria de rapido acceso, permite resolver los problemas mas pequeños (Primeros valores de N) de forma rapida y eficiente a modo de disminuir el tiempo de ejecución. Esto se debe a la jerarquia de las memorias donde la cache es de las mas rapidas pero mas pequeñas al mismo tiempo. 
 
 Se adjuntan los plots y estado del procesador para cada caso.
 
 Caso 1 Single:
+
+![](Images/Plot_inv_caso1_single.png)
+
+![](Images/timing_inv_caso1_single.png)
 
 Caso 1 Double:
 
