@@ -184,23 +184,23 @@ Caso 7: scipy.linalg.solve usando overwrite_a=True y overwrite_b=True
 
 Item B:
 
-Caso 1:
+Caso 1: scipy.linalg.eigh default
 
-Caso 2:
+Caso 2: scipy.linalg.eigh con driver="ev" y overwrite_a=False
 
-Caso 3:
+Caso 3: scipy.linalg.eigh con driver="ev" y overwrite_a=True
 
-Caso 4:
+Caso 4: scipy.linalg.eigh con driver="evd" y overwrite_a=False
 
-Caso 5:
+Caso 5: scipy.linalg.eigh con driver="evd" y overwrite_a=True
 
-Caso 6:
+Caso 6: scipy.linalg.eigh con driver="evr" y overwrite_a=False
 
-Caso 7:
+Caso 7: scipy.linalg.eigh con driver="evr" y overwrite_a=True
 
-Caso 8:
+Caso 8: scipy.linalg.eigh con driver="evx" y overwrite_a=False
 
-Caso 9:
+Caso 9: scipy.linalg.eigh con driver="evx" y overwrite_a=True
 
 
 
