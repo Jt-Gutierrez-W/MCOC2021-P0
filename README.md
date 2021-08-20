@@ -161,6 +161,33 @@ Caso 3 Longdouble:
 
 ##### DESEMPEÑO SOLVE Y EIGH #####
 
+
+
+A modo de aclarar a que caso corresponde cada corrida y que parametros incluye, se especifican a continuacion para los distintos items A y B: 
+
+Item A:
+
+Caso 1: A^-1 y luego hacer x= A^-1 * b
+Caso 2: scipy.linalg.solve default
+Caso 3: scipy.linalg.solve usando assume_a='pos'
+Caso 4: scipy.linalg.solve usando assume_a='sym'
+Caso 5: scipy.linalg.solve usando overwrite_a=True
+Caso 6: scipy.linalg.solve usando overwrite_b=True
+Caso 7: scipy.linalg.solve usando overwrite_a=True y overwrite_b=True
+
+Item B:
+
+Caso 1:
+Caso 2:
+Caso 3:
+Caso 4:
+Caso 5:
+Caso 6:
+Caso 7:
+Caso 8:
+Caso 9:
+
+
 1) Comentarios y observaciones:
 
 R: comentar
