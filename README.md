@@ -248,15 +248,23 @@ Item_B_Double:
 
 7) ¿Que hay del uso de memoria (como crece)? 
 
-R:
+R: En general el uso de memoria de comporta de forma lineal con una pequeña variacion al inicio de los Item_B. Esto era de esperar ya que en general la memoria que reserva es la correspondiente a las multiples matrices para realizar el algoritmo y resolver el problema.
 
 Item_A_Single:
 
+![](Entrega4/Item_A_single_mem.png)
+
 Item_A_Double:
+
+![](Entrega4/Item_A_double_mem.png)
 
 Item_B_Single:
 
+![](Entrega4/Item_B_single_mem.png)
+
 Item_B_Double:
+
+![](Entrega4/Item_B_double_mem.png)
 
 
 
