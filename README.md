@@ -230,11 +230,19 @@ R: Si, para todos los casos la maquina se aprovecha del paralelismo a modo de me
 
 Item_A_Single:
 
+![](Entrega4/Item_A_single_cpu.png)
+
 Item_A_Double:
+
+![](Entrega4/Item_A_double_cpu.png)
 
 Item_B_Single:
 
+![](Entrega4/Item_B_single_cpu.png)
+
 Item_B_Double:
+
+![](Entrega4/item_B_double_cpu.png)
 
 
 
