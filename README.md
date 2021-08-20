@@ -227,7 +227,7 @@ R: Si, por ejemplo, en el item A, el caso 1 es el mejor metodo para tamaños de 
 
 5) ¿A que se puede deber la superioridad de cada opción?
 
-R: Al algoritmo y compatibilidad con el sistema, muchas 
+R: Al algoritmo y compatibilidad con el sistema, distintos algoritmos pueden estar basados en distintos metodos que consuman mas memoria para mejorar el tiempo de ejecución o viceversa, dependiendo de las especificaciones del sistema si se tiene buena CPU o mucha memoria un metodo u otro puede ser mejor o peor. Ejemplos de algoritmos que priorizan tiempo por sobre memoria es utilizar programación dinámica. 
 
 6) ¿Su computador usa más de un proceso por cada corrida?
 
