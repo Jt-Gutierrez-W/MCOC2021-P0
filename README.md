@@ -206,23 +206,28 @@ Caso 9: scipy.linalg.eigh con driver="evx" y overwrite_a=True
 
 1) Comentarios y observaciones:
 
-R: 
+R: En cuanto al item A, se puede observar que resolver el problema invirtiendo y luego multiplicando es bastante caro, por lo que el caso 1 es el de peor rendimiento para casos de N grandes. Sin embargo, para N's pequeños, esta rutina presenta los mejores resultados. Por otro lado, en la medida en que crece el problema el caso 3 presenta los mejores resultados demorandose el menor tiempo y utilizando la misma cantidad de memoria. En cuanto a la memoria, el caso 1 es el que mas utiliza, por lo que no seria recomendable aplicar esta rutina en casos donde la memoria se vea limitada. En cuanto al tipo de dato, se puede apreciar que el dato double en general tarda un poco mas en procesar y entregar resultados para Ns grandes. 
+
+En cuanto al item B, el comportamiento es más homogeneo con una leve superioridad del caso 5 y caso 4 los cuales demuestran una leve mejoria en el tiempo de ejecución. En cuanto a la memoria, se puede observar que se comporta de forma lineal para ambos tipos de datos, con un leve aumento en el tipo double por razones obvias. Dentro de esta grafica lineal, se puede observar un pequeño comportamiento potencial al principio del grafico, probablemente por el over-head que necesita dicha funcion o rutina para correr. Finalmente, en el caso de dato single, se puede ver una mayor volatilidad en la zona inicial del grafico de tiempo, probablemente por el over-head y jerarquia de la memoria.
 
 2) ¿Como es la variabilidad del tiempo de ejecucion para cada algoritmo?
 
-R:
+R: Para el item B, se puede apreciar que en general el comportamiento es parecido para todos los casos probados, sin embargo, existe una leve mejora para el caso 4 y caso 5. Probablemente tenga que ver con los driver los cuales componen cierta rutina que determina la estrategia o forma para resolver el problema. Estas rutinas pueden ser estudiadas en la documentación de LAPACK.
+
+Para el item A, el comportamiento tambien es bastante parecido con algunas diferencias en casos especificos como el caso 1 el cual invierte la matriz y luego multiplica. Los demas casos tienden a comportarse de forma similar con una leve mejoria del caso 3 el cual presenta el menor tiempo de ejecución. En cuanto a la zona inicial de Ns pequeños existe mayor volatilidad en el tiempo de ejecución, pero luego tienden a unificarse y comportarse de manera similar. Finalmente, en ambos tipos de datos el comportamiento es similar.
 
 3) ¿Qué algoritmo gana (en promedio) en cada caso?
 
-R:
+R: En el item A gana el caso 3 para ambos tipos de datos, assumiendo la matriz como definida postivia (assume_a='pos').
+En el item B, gana el caso 4 y caso 5 para ambos tipos de datos, por lo que para mi sistema el driver 'evd' presenta la mejor rutina.
 
 4) ¿Depende del tamaño de la matriz?
 
-R:
+R: Si, por ejemplo, en el item A, el caso 1 es el mejor metodo para tamaños de matriz pequeños, pero a medida que aumenta el tamaño este algortimo presenta bastantes falencias.
 
 5) ¿A que se puede deber la superioridad de cada opción?
 
-R:
+R: Al algoritmo y compatibilidad con el sistema, muchas 
 
 6) ¿Su computador usa más de un proceso por cada corrida?
 
