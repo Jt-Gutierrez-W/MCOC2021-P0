@@ -158,3 +158,48 @@ Caso 3 Longdouble:
 
 
 
+
+##### DESEMPEÑO SOLVE Y EIGH #####
+
+1) Comentarios y observaciones:
+
+R: comentar
+
+2) ¿Como es la variabilidad del tiempo de ejecucion para cada algoritmo?
+
+R:
+
+3) ¿Qué algoritmo gana (en promedio) en cada caso?
+
+R:
+
+4) ¿Depende del tamaño de la matriz?
+
+R:
+
+5) ¿A que se puede deber la superioridad de cada opción?
+
+R:
+
+6) ¿Su computador usa más de un proceso por cada corrida?
+
+R: Si, para todos los casos la maquina se aprovecha del paralelismo a modo de mejorar el tiempo de ejecución. Para esto distribuye el prolema grande en sub-problemas, los cuales distribuye en los distintos nucleos y threads. Se adjuntan imagenes del procesador para cada corrida.
+
+Item_A_Single:
+
+Item_A_Double:
+
+Item_B_Single:
+
+Item_B_Double:
+
+
+
+7) ¿Que hay del uso de memoria (como crece)? 
+
+R:
+
+
+
+
+
