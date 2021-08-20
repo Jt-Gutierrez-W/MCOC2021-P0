@@ -206,7 +206,7 @@ Caso 9: scipy.linalg.eigh con driver="evx" y overwrite_a=True
 
 1) Comentarios y observaciones:
 
-R: comentar
+R: 
 
 2) ¿Como es la variabilidad del tiempo de ejecucion para cada algoritmo?
 
