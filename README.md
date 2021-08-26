@@ -273,3 +273,13 @@ Item_B_Double:
 
 
 
+
+##### MATRICES DISPERSAS Y COMPLEJIDAD COMPUTACIONAL #####
+
+
+1) Comentarios y observaciones:
+
+R:
+
+
+
