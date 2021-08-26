@@ -283,8 +283,8 @@ R:
 
 
 Codigo de ensamblaje Sparse:
-`
-def generar_matriz_llena (N,dtype): #matriz llena estilo numpy clasico
+
+`def generar_matriz_llena (N,dtype): #matriz llena estilo numpy clasico
 
     t1 = perf_counter()  
     
@@ -300,6 +300,4 @@ def generar_matriz_llena (N,dtype): #matriz llena estilo numpy clasico
     
     dt = t2-t1
     
-    return L, dt
-    
-`
+    return L, dt`
