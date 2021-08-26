@@ -285,39 +285,29 @@ R:
 Codigo de ensamblaje LLena:
 
 ```
-
 def generar_matriz_llena (N,dtype): 
-
     t1 = perf_counter()  
-    
     L=np.zeros((N,N),dtype=dtype)
-    
     np.fill_diagonal(L, dtype(2))
-    
     np.fill_diagonal(L[1:], -np.ones(N-1,dtype=dtype))
-    
     np.fill_diagonal(L[:,1:], -np.ones(N-1,dtype=dtype))
-    
     t2 = perf_counter()
-    
     dt = t2-t1
-    return L, dt
-    
+    return L, dt   
 ```
 
 
 ```
-
-def malloc_time_sparse (N,dtype): 
-    A, dt_G = generar_matriz_sparse(N, dtype)
-    B, dt_G2 = generar_matriz_sparse(N, dtype)
+def generar_matriz_sparse(N,dtype):
     t1 = perf_counter()
-    A@B
+    L = csr_matrix((N,N),dtype=dtype).toarray()
+    np.fill_diagonal(L, dtype(2))
+    np.fill_diagonal(L[1:], -np.ones(N-1,dtype=dtype))
+    np.fill_diagonal(L[:,1:], -np.ones(N-1,dtype=dtype))
     t2 = perf_counter()
-    dt_G+=dt_G2
-    dt_M = t2-t1
-    return dt_G, dt_M
-    
+    dt = t2-t1
+    return L, dt  
+
 ```
 
 
