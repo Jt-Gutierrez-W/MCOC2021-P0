@@ -310,4 +310,11 @@ def generar_matriz_sparse(N,dtype):
 
 ```
 
+Rendimiento matmul matriz llena:
+
+![](Images/timing_matmul_llena.png)
+
+Rendimiento matmul matriz sparse:
+
+![](Images/timing_matmul_sparse.png)
 
