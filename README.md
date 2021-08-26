@@ -282,7 +282,7 @@ Item_B_Double:
 R:
 
 
-Codigo de ensamblaje Sparse:
+Codigo de ensamblaje LLena:
 
 ```
 
@@ -301,6 +301,23 @@ def generar_matriz_llena (N,dtype):
     t2 = perf_counter()
     
     dt = t2-t1
-    
     return L, dt
+    
 ```
+
+
+```
+
+def malloc_time_sparse (N,dtype): 
+    A, dt_G = generar_matriz_sparse(N, dtype)
+    B, dt_G2 = generar_matriz_sparse(N, dtype)
+    t1 = perf_counter()
+    A@B
+    t2 = perf_counter()
+    dt_G+=dt_G2
+    dt_M = t2-t1
+    return dt_G, dt_M
+    
+```
+
+
