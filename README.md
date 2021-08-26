@@ -282,7 +282,7 @@ Item_B_Double:
 R:
 
 
-Codigo de ensamblaje LLena:
+Codigo de ensamblaje matriz llena:
 
 ```
 def generar_matriz_llena (N,dtype): 
@@ -295,7 +295,7 @@ def generar_matriz_llena (N,dtype):
     dt = t2-t1
     return L, dt   
 ```
-
+Codigo de ensamblaje matriz sparse:
 
 ```
 def generar_matriz_sparse(N,dtype):
