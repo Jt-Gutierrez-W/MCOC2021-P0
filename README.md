@@ -279,7 +279,7 @@ Item_B_Double:
 
 1) Comentarios y observaciones:
 
-R:
+R: En cuanto al codigo de ensamblaje, se aprovechó la eficiencia de la libreria numpy para generar estas matrices, ya que, al estar programada en C y Fortran presenta grandes ganancias en tiempo de ejecución por la naturaleza del bajo nivel. Ademas, estas librerias presentan algoritmos optimizados para funcionar en python y minimizar el tiempo de las corridas. Al mismo tiempo, en base a los graficos obtenidos, se puede ver que la complejidad para ensamblaje es lineal, lo cual es bastante bueno en el mercado, ya que esta complejidad es muy valorada en el mercado de la ingenieria de software al comportarse de buena forma frente a N's muy grandes. En cuanto a la solución (Matmul), se puede apreciar que es de caracter cubica asintoticamente. Este tipo de complejidad no es la mejor del mundo, sin embargo, por la naturaleza del problema de multiplicar matrices no debe ser posible alcanzar una complejidad menor y esta complejidad cubica debe ser la mejor y más optimizada. 
 
 
 Codigo de ensamblaje matriz llena:
