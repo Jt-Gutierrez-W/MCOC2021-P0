@@ -342,3 +342,24 @@ R:
 4) ¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
 
 R:
+
+
+
+
+Se adjuntan los graficos correspondientes a cada caso:
+
+Solve Sparse:
+
+![](Images/plot_solve_sparse.png)
+
+Solve Llena:
+
+![](Images/plot_solve_llena.png)
+
+Inv Sparse:
+
+![](Images/plot_inv_sparse.png)
+
+Inv Llena:
+
+![](Images/plot_inv_llena.png)
