@@ -318,3 +318,27 @@ Rendimiento matmul matriz sparse:
 
 ![](Images/timing_matmul_sparse.png)
 
+
+
+
+
+
+
+##### MATRICES DISPERSAS Y COMPLEJIDAD COMPUTACIONAL (PARTE 2) #####
+
+
+1) Comentarios y observaciones:
+
+R:
+
+2) ¿Cual parece la complejidad asintótica (para N→∞)  para el ensamblado y solución en ambos casos y porqué?
+
+R:
+
+3) ¿Como afecta el tamaño de las matrices al comportamiento aparente?
+
+R:
+
+4) ¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
+
+R:
