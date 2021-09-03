@@ -350,8 +350,25 @@ R:
 
 Codigo de ensamblaje:
 
-
-
+```
+def generar_matriz_llena (N,dtype): 
+    t1 = perf_counter()  
+    L=np.zeros((N,N),dtype=dtype)
+    np.fill_diagonal(L, dtype(2))
+    np.fill_diagonal(L[1:], -np.ones(N-1,dtype=dtype))
+    np.fill_diagonal(L[:,1:], -np.ones(N-1,dtype=dtype))
+    t2 = perf_counter()
+    dt = t2-t1
+    return L, dt   
+```
+```
+def generar_matriz_sparse(N,dtype): 
+    t1 = perf_counter()
+    L = diags([-1, 2, -1], [-1, 0, 1], shape=(N, N)) 
+    t2 = perf_counter()
+    dt = t2-t1
+    return L, dt  
+```
 
 Se adjuntan los graficos correspondientes a cada caso:
 
