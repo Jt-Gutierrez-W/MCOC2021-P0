@@ -329,9 +329,14 @@ Rendimiento matmul matriz sparse:
 
 1) Comentarios y observaciones:
 
-R:
+R: Para el caso de solve, se puede ver que al utilizar matrices sparse, el tiempo de resolución y complejidad del algoritmo son mucho menores que en el formato de matriz llena. Esta ganancia en tiempo, se debe a que la matriz sparse utiliza menos memoria, ya que, los ceros no son tomados en cuenta y solo se guardan los valores numericos distintos de cero. Para implementar esto, los valores distintos de cero, son almacenados en un array por posición de filas o columnas y con los valores uno al lado de otro en orden creciente. Gracias a esto, la matriz pasa de ser un elemento "uni-dimensional" ayudando a bajar la complejidad de los algoritmos asociados a esta, ya que, en vez de recorrer toda la matriz, simplemente se recorren estos elementos no nulos, ayudando asi a eliminar los "nested loops" y mejorando el algoritmo solver.
+Lo anterior, se puede apreciar en los graficos generados, ya que la complejidad para el caso sparse es O(N) y para el caso llena es O(N^3).
+Cabe mencionar, que el ensamblaje se mantiene como complejidad lineal, sin embargo, al resolver tan rapido los primeros 20000 casos se presenta al principio como un comportamiento constante, sin embargo, alfinal se aprecia su verdadera forma O(N).
 
-2) ¿Cual parece la complejidad asintótica (para N→∞)  para el ensamblado y solución en ambos casos y porqué?
+Para el caso de inv, la diferencia no es tan significativa como en el caso de solve, aun asi se puede apreciar una ganancia en complejidad por lo anteriormente mencionado. En el caso sparse, se puede apreciar como se comporta de forma potencial menor o igual a O(N^3) dependiendo del sector que se analice, mientras que en el caso llena se comporta de forma cubica desde mucho antes, tomandole mas tiempo de solución en los casos donde N es mas grande. Cabe mencionar, que para inputs pequeños el caso lleno se comporta mejor, lo cual es bastante esperado, ya que los algoritmos para invertir matrices sparse son mas complejos y requieren mas pasos (para aprovechar los valores nulos).
+
+
+2) ¿Cual parece la complejidad asintótica (para N→∞) para el ensamblado y solución en ambos casos y porqué?
 
 R:
 
@@ -342,6 +347,8 @@ R:
 4) ¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
 
 R:
+
+Codigo de ensamblaje:
 
 
 
