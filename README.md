@@ -338,15 +338,20 @@ Para el caso de inv, la diferencia no es tan significativa como en el caso de so
 
 2) ¿Cual parece la complejidad asintótica (para N→∞) para el ensamblado y solución en ambos casos y porqué?
 
-R:
+R: Para el caso de solve, el ensamblaje en ambos casos se comporta de forma lineal, sin embargo, en el caso sparse, al tener que guardar menos valores, se ve un especie de comportamiento constante, ya que, aun no llega al sector lineal por la pequeña cantidad de valores que debe guardar (solo guarda en memoria los valores no nulos), entonces alfinal esta curva se desplaza hacia la derecha. El comportamiento lineal, se debe a que se requiere solo un loop para recorrer todos los valores que deben ir en la matriz, si este loop es muy pequeño el comportamiento se puede aproximar a constante que es lo que se observa en el caso sparse.
+Para la solución, el comportamiento sparse es lineal, lo cual se debe a que al tener menos valores asociados a la matriz, "baja" la dimension de esta y requiere menos loops para recorrer y resolver el problema en si. Cabe mencionar, que el metodo que usa para resolver el problema es una factorización LU y luego con estas aplciar operaciones de fila y dividir el problema grande en problemas mas pequeños, al tener "menos dimensiones" en el problema se requieren menos loops y de esta forma baja la complejidad. En el caso de  llena, el comportamiento es cubico asintoticamente, por la cantidad de loops que significa la descomposición LU, en este caso no existe una baja de dimension ya que todos los valores son guardados en memoria de la misma manera.
+
+Para el caso inv, en el ensamblaje pasa exactamente lo mismo que en el caso de solve. 
+Para la solución, la complejidad sparse tiende a ser O(N^2) en la mitad y luego asintoticamente O(N^3), al invertir matrices no es de mucha ayuda que sea sparse ya que al invertir, hay que realizar operacioens de fila y luego guardarlas en otra matriz que sera la resultante, por esto, en el proceso se puede perder la matriz sparse y terminar guardando todos los valores culminando en una matriz llena. Cabe mencionar, que invertir es un proceso muy caro, por lo que aun cuando se tiene una matriz sparse no conviene invertir ya que se pierde este beneficio.
 
 3) ¿Como afecta el tamaño de las matrices al comportamiento aparente?
 
-R:
+R: Esta afecta de gran forma, ya que dependiendo del tamaño del input la función (solve o inv) se comporta de distinta forma. Esto se debe a que, aun cuando se tiene un codigo potencial, en algunos casos si el input es muy pequeño los loops ocurren muy pocsa veces "mostrando" una complejidad menor a la que enverdad se tiene. Por esto, ante distintos tamaños de inputs existen distintos comportamientos. Por ejemplo, en inversa sparse, en tamaños de N medianos el comportamiento se asemeja a una función cuadratica, pero al llegar al N mas grande, se comporta de forma cubica. Otro ejemplo es el ensamblaje, donde para N pequeños el comportamiento es del tipo constante. Finalmente, esto ayuda a elegir de que forma resolver el problema, ya que aveces el sparse no es lo mejor, ya que si mi problema es acotado, incluso utilizar el formato llena puede ser mejor para N's pequeños.
 
 4) ¿Qué tan estables son las corridas (se parecen todas entre si siempre, nunca, en un rango)?
 
-R:
+R: En general para el tipo de matriz sparse en ambas funciones las corridas son bastante estables, manteniendose de forma homogenea en el mismo rango, por lo que se puede asumir que en el caso sparse, al trabajar los datos, se utilizan algoritmos que dependen menos del estado de la maquina (Scheduled tasks in the OS) y mas del codigo en si, ayudando a mantener todas las corridas en rangos muy similares. Esto, se puede explicar gracias al ahorro de calculos en una matriz sparse, lo que genera menos dependencia de los recursos virtualizados. Al mismo tiempo, las rutinas que involucran operaciones de fila y columna son mas compactas ayudando a reducir la volatilidad.
+En el caso de matriz llena, existe mucha mayor volatilidad, debido a que no cuentan con el ahorro de memoria que si tiene el caso sparse, en el caso de matriz llena, al tener que realizar todas las operaciones, icncluidas las colocaciones de ceros, se tienen bastantes operaciones en paralelo, teniendo que asignar direcciones y lugares de memoria para muchos datos al mismo tiempo, de cierta forma "saturando" los recursos generando ciertas volatilidades en algunas corridas. 
 
 Codigo de ensamblaje:
 
